@@ -1,0 +1,37 @@
+algoritmo "Exercicio_2"
+
+//Desenvolva um algoritmo em para ler o ano de nascimento de uma pessoa, calcular
+//e mostrar sua idade e, também, verificar e mostrar se ela já tem idade para
+//votar (16 anos ou mais) e para conseguir a Carteira de Habilitação (18 anos ou
+//mais).
+
+var
+pessoa: inteiro
+ano: real
+anoPessoa: real
+
+
+
+inicio
+ano := 2025
+
+Escreval("Digite o ano que você nasceu: ")
+leia(pessoa)
+
+anoPessoa:= ano - pessoa
+
+se (anoPessoa > 18) entao
+   escreval("Você pode tirar a carteira e votar!")
+senao
+   se (anoPessoa > 16) entao
+      escreval("Você pode votar!")
+   senao
+      escreval("Você não pode votar nem tirar a carteira!")
+   fimse
+fimse
+
+
+
+
+fimalgoritmo
+

@@ -1,0 +1,39 @@
+algoritmo "Exercicio_2"
+
+//Crie uma função que leia um número não determinado de valores positivos e
+//calcule a soma desses números. A função deve parar de ler números quando um
+//número negativo for digitado e retornar a soma dos números lidos.
+
+var
+
+funcao soma(): inteiro
+
+var
+total: inteiro
+usernum: inteiro
+
+inicio
+
+   escreval("Digite um valor para a soma: ")
+   leia(usernum)
+
+   enquanto (usernum > 0) faca
+   total:= total + usernum
+      escreval("Digite mais um número para a soma: ")
+      leia(usernum)
+
+   fimenquanto
+
+   retorne total
+
+fimfuncao
+
+
+
+
+inicio
+escreval("O total dos números é: ",soma)
+
+
+fimalgoritmo
+

@@ -1,0 +1,84 @@
+algoritmo "Batalha_Naval"
+
+//Desenvolva um algoritmo que simule o jogo da batalha naval.
+
+var
+matriz: vetor[0..5, 0..5] de caracter
+linha, coluna, navio, jogadaX, jogadaY, linhaNavio, colunaNavio: inteiro
+tentativas: inteiro
+terminarJogo:logico
+
+inicio
+escreval("--Batalha Naval--")
+Escreval("--Gerando Navio--")
+
+
+linhaNavio:= randi(5) + 1
+colunaNavio:= randi(5) + 1
+escreval("linha Navio:", linhaNavio)
+escreval("Coluna Navio:", colunaNavio)
+escreval("Você tem no máximo 24 tentaivas!")
+
+para linha de 1 ate 5 faca
+   para coluna de 1 ate 5 faca
+      matriz[linha,coluna]:= "*"
+   fimpara
+fimpara
+
+repita
+
+
+   para linha de 0 ate 5 faca
+      para coluna de 0 ate 5 faca
+         escreva(matriz[linha,coluna], " ")
+      fimpara
+      escreval()
+   fimpara
+
+
+   escreval("Digite o numero da linha 1 a 5:")
+   leia(jogadaX)
+   enquanto (jogadaX > 5) ou (jogadaX < 0) faca
+      escreval("O número não pode ser maior que 5 e menor que 0! Repita jogada")
+      leia(jogadaX)
+   fimenquanto
+
+
+   escreval("Digite o numero da coluna:")
+   leia(jogadaY)
+    enquanto (jogadaY> 5) ou (jogadaY < 0) faca
+      escreval("O número não pode ser maior que 5 e menor que 0! Repita jogada")
+      leia(jogadaY)
+   fimenquanto
+
+
+
+   se (jogadaX = linhaNavio) e (jogadaY = colunaNavio) entao
+      escreval("Parabéns! Você ganhou o jogo")
+      tentativas :=tentativas +1
+      terminarJogo:=verdadeiro
+      escreval("Número de tentativas: ",tentativas)
+
+
+   senao
+      escreval("SPLASH! Você não acertou nada")
+      matriz[jogadaX,jogadaY] := "x"
+      tentativas :=tentativas +1
+      escreval("Número de tentativas: ",tentativas)
+      escreval("--------------------------------")
+
+
+fimse
+se (tentativas = 24) entao
+escreval("Derrota! Você excedeu o número de tentativas")
+fimse
+ate (terminarJogo= verdadeiro) ou (tentativas =24)
+
+
+fimalgoritmo
+
+
+
+
+
+

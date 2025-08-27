@@ -1,0 +1,30 @@
+algoritmo "Exercício_1"
+
+// Desenvolva um algoritmo que, dado o nome de uma pessoa (Nome + Sobrenome),
+//retorna apenas o sobrenome. Ex: “Pedro Ferreira”, retorna somente “Ferreira”.
+
+var
+nome: caractere
+comprimento: inteiro
+espaco: inteiro
+sobrenome: caractere
+
+inicio
+
+
+Escreval("Digite seu 1º e 2º nome (sem preposições!!!): ")
+leia(nome)
+
+comprimento := compr(nome)
+escreval(comprimento)
+
+espaco := pos(" ": nome) +1
+escreval(espaco)
+
+sobrenome := copia(nome, espaco, comprimento)
+escreval("Seu sobrenome é: ",sobrenome)
+
+
+
+
+fimalgoritmo

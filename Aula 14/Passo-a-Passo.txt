@@ -1,0 +1,54 @@
+algoritmo "jogo "
+
+var
+hora_ini, hora_final, hora_total, minuto_ini, minuto_final, minuto_total: inteiro
+
+inicio
+escreval("Informe a hora e o minut inicial do jogo:")
+leia(hora_ini, minuto_ini)
+
+escreval("Agora informe a hora e o minuto final do jogo:")
+leia(hora_final, minuto_final)
+
+se(hora_ini > 23) entao
+   escreval("*ERRO* ENTRADA DE DADOS NÃO É VÁLIDA EM HORA INICIAL *ERRO*")
+senao
+   se (minuto_ini > 59) entao
+      escreval("*ERRO* ENTRADA DE DADOS NÃO É VÁLIDA EM MINUTOS INICIAL *ERRO*")
+   senao
+      se(hora_final > 23) entao
+         escreval("*ERRO* ENTRADA DE DADOS NÃO É VÁLIDA EM HORA FINAL *ERRO*")
+      senao
+         se(minuto_final > 59) entao
+            escreval("*ERRO* ENTRADA DE DADOS NÃO É VÁLIDA EM MINUTOS FINAIS *ERRO*")
+         senao
+            se (hora_ini < hora_final) entao
+               hora_total <- hora_final - hora_ini
+            senao
+               se (hora_ini > hora_final) entao
+                  hora_total <- (hora_final + 24) - hora_ini
+               fimse
+            fimse
+
+            se (minuto_ini > minuto_final) entao
+               hora_total <- hora_total - 1
+            fimse
+            se (minuto_ini < minuto_final) entao
+               minuto_total <- minuto_final - minuto_ini
+            senao
+               se (minuto_ini > minuto_final) entao
+                  minuto_total <- (minuto_final + 60) - minuto_ini
+               fimse
+            fimse
+
+            se ((hora_ini <= 23) ou (hora_final <=23)) ou ((minuto_ini <59) ou (minuto_final<59)) entao
+               escreval("O total de duração do jogo foi de:",hora_total, " horas e",minuto_total," minutos")
+            fimse
+         fimse
+      fimse
+   fimse
+fimse
+
+
+
+fimalgoritmo

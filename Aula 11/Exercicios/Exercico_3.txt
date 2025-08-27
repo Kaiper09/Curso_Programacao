@@ -1,0 +1,40 @@
+algoritmo "Exercício_3"
+
+//Crie um procedimento que receba um número como parâmetro e escreva a tabuada
+//desse número.
+
+
+procedimento tabuada (var n: inteiro)
+
+
+var
+x: inteiro
+
+inicio
+
+para x de 1 ate 10 faca
+escreval(n ," X",x, " =",n * x)
+fimpara
+
+fimprocedimento
+
+var
+num: inteiro
+
+
+inicio
+Escreval("Digite um némero para ver a tabuada: ")
+leia(num)
+
+tabuada(num)
+
+
+
+
+
+fimalgoritmo
+
+
+
+
+

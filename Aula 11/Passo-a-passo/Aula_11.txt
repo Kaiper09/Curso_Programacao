@@ -1,0 +1,22 @@
+algoritmo "Procedimento"
+
+var
+numero: inteiro
+//-------------------------
+
+procedimento Dobro (valor: inteiro)
+
+var
+total: inteiro
+
+inicio
+   total <- valor * 2
+   escreval("O dobro é: ", total)
+fimprocedimento
+
+inicio
+escreval("Digite um número: ")
+leia(numero)
+Dobro(numero)
+
+fimalgoritmo

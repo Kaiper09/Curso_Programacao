@@ -1,0 +1,48 @@
+algoritmo "Exercício_4"
+
+// Crie um procedimento que, dado um número N por parâmetro, desenhe o
+//seguinte padrão na tela:
+
+//  N= 5
+//  1 * * * *
+//  * 2     *
+//  *   3   *
+//  *     4 *
+//  * * * * 5
+
+procedimento imagen (var num: inteiro)
+var
+x,y : inteiro
+
+inicio
+para x de 1 ate num faca
+   para y de 1 ate num faca
+
+      se (x = y) entao
+         escreva(x)
+      senao
+
+         se (x = 1) ou (y = 1) ou (x = num) ou ( y=num )  entao
+            escreva("*")
+         senao
+            escreva(" ")
+         fimse
+         fimse
+   fimpara
+   escreval()
+fimpara
+
+fimprocedimento
+
+
+var
+num: inteiro
+
+inicio
+escreval("Insira um número:")
+leia(num)
+escreval("-------------")
+
+imagen(num)
+
+fimalgoritmo

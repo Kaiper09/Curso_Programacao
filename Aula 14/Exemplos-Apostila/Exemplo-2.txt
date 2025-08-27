@@ -1,0 +1,82 @@
+algoritmo "VERIFICAR AUDIÊNCIA DE CANAL DE TV"
+
+//O objetivo do programa é que o usuário possa
+//votar na opção que mais assiste. O usuário pode
+//votar quantas vezes desejar, incluindo votar em
+//branco, ao final quando ele digitar o número zero, o
+//programa deve encerrar e então mostrar na tela o
+//resultado de audiência de cada uma das redes de
+//televisão assim como os votos em branco.
+
+var
+Record, SBT, Band, Globo, redeTv, Gazeta: real
+branco, total: real
+canal: caractere
+
+inicio
+enquanto canal <> "0" faca
+
+escreval("Digite uma das opções  ou 0 para sair:")
+escreval("1 - Record")
+escreval("2 - SBT")
+escreval("3 - Band")
+escreval("4 - Globo")
+escreval("5 - rede Tv")
+escreval("6 - Gazeta")
+escreval("7 - Voto em Branco")
+leia(canal)
+
+limpatela
+
+escolha canal
+caso "1"
+Record <- Record +1
+
+caso "2"
+SBT <- SBT +1
+
+caso "3"
+Band <- Band +1
+
+caso "4"
+Globo <- Globo +1
+
+caso "5"
+redeTv <- redeTv +1
+
+caso "6"
+Gazeta <- Gazeta +1
+
+caso "7"
+branco <- branco +1
+
+caso "0"
+escreva("")
+outrocaso
+escreval("Digite um canal da lista!")
+fimescolha
+fimenquanto
+
+total <- Record + SBT + Band + Globo + redeTv + Gazeta + branco
+
+Record <- (Record / total)*100
+SBT <- (SBT / total)*100
+Band <- (Band / total)*100
+Globo <- (Globo / total)*100
+redeTv <- (redeTv / total)*100
+Gazeta <- (Gazeta / total)*100
+branco <- (branco / total)*100
+
+escreval("")
+
+escreval("A totalização de audiência em %: ")
+escreval("A audiência de hoje foi de ",total, " pessoas assitindo")
+escreval("Record teve ",Record:2:2, "% de audiência.")
+escreval("SBT teve ",SBT:2:2, "% de audiência.")
+escreval("Band teve ",Band:2:2, "% de audiência.")
+escreval("Globo teve ",Globo:2:2, "% de audiência.")
+escreval("RedeTv teve ",redeTv:2:2, "% de audiência.")
+escreval("Gazeta teve ",Gazeta:2:2, "% de audiência.")
+escreval(branco:2:2,"% não assistiram.")
+
+fimalgoritmo

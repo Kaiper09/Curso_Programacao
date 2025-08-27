@@ -1,0 +1,25 @@
+algoritmo "Par ou ímpar"
+
+//Desenvolva um algoritmo que leia um número e retorne o seu quadrado e o seu
+//cubo.
+var
+num: inteiro
+cubo: real
+quadrado: real
+
+inicio
+Escreval("Insira um número: ")
+leia(num)
+
+enquanto num < 0 faca
+escreval("O número deve ser maior que zero!!")
+leia(num)
+fimenquanto
+
+cubo := num ^ 3
+escreval(num, " ao cubo: ",cubo)
+
+quadrado := num ^ 2
+escreval(num, " ao quadrado: ",quadrado)
+
+fimalgoritmo

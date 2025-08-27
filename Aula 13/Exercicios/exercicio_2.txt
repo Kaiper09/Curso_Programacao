@@ -1,0 +1,78 @@
+algoritmo "Exercício_2"
+
+//Desenvolva um algoritmo que receba números impares e então retorne um
+//desenho na tela com os respectivos caracteres: +, - e |. Ex: 5x3:
+
+//  N= 5,3
+
+//  1 2 3
+//  + - +  1
+//  |   |  2
+//  |   |  3
+//  |   |  4
+//  + - +  5
+
+var
+num: inteiro
+
+x,y : inteiro
+
+altura, largura: inteiro
+
+inicio
+escreval("Digite uma largura para o desenho:")
+leia(altura)
+enquanto (altura %2=0) faca
+   escreval("O número deve ser ímpar: ")
+   leia(altura)
+fimenquanto
+
+escreval("Digite uma altura para o desenho:")
+leia(largura)
+enquanto (largura %2=0) faca
+   escreval("O número deve ser ímpar também: ")
+   leia(largura)
+fimenquanto
+
+escreval()
+escreval()
+
+
+para x de 1 ate largura faca
+   para y de 1 ate altura faca
+
+
+      se ((x=1) e (y= 1)) ou ((x=1) e (y=altura)) ou ((y=1) e (x=largura)) ou ((y=altura) e (x=largura)) entao
+         escreva("+")
+
+         //-----------------------
+
+      senao
+         se ( y= altura ) ou (y = 1)  entao
+            escreva("|")
+
+            //-----------------------
+
+         senao
+            se  (x = 1) ou (x = largura) entao
+               escreva("-")
+
+               //-----------------------
+
+            senao
+               escreva(" ")
+            fimse
+
+         fimse
+
+      fimse
+
+   fimpara
+   escreval()
+fimpara
+
+
+
+fimalgoritmo
+
+

@@ -1,0 +1,31 @@
+algoritmo "CALCULA QUILOMETRAGEM POR LITRO"
+
+var
+capcTanq: inteiro
+litroAbast: inteiro
+kmUltAbast: inteiro
+respCons, sobraTanq, autonFutura: real
+
+inicio
+escreva("Digite a capacidade do tanque em litros: ")
+leia(capcTanq)
+escreva("Quantidade de litros abastecidos: ")
+leia(litroAbast)
+escreva("Qua a quilometragem desde o último abastecimento? ")
+leia(kmUltAbast)
+
+respCons <- litroAbast/kmUltAbast
+
+sobraTanq <- capcTanq - litroAbast
+
+autonFutura <- sobraTanq-respCons
+
+escreval("Consumo efetuado é de: ",respCons," Lts/km")
+escreval("Autonomia que ainda teria é de: ",autonFutura, " km")
+escreval(" ")
+escreval("---Outras curiosidades---")
+
+escreval("Quantos litros sobraram no tanque? ",sobraTanq, "L")
+escreval("Quilometragem por litro? ",kmUltAbast/litroAbast:2:1," k/litros")
+
+fimalgoritmo

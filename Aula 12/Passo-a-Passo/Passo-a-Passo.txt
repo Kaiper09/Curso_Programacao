@@ -1,0 +1,19 @@
+algoritmo "Par ou ímpar"
+
+//Vamos desenvolver na prática um programa simples, que tem o objetivo de informar
+//se o número digitado é par ou ímpar. No VisuAlg, insira a
+//variável, assim como determine que o usuário insira um número inteiro.
+
+var
+n: inteiro
+
+inicio
+Escreval("Insira um número inteiro: ")
+leia(n)
+se(n mod 2 = 0) entao
+   escreval("O número: ",n," é par!")
+senao
+   escreval("O número ",n," é ímpar!")
+fimse
+
+fimalgoritmo
